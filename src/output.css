@@ -308,6 +308,9 @@
   .w-full {
     width: 100%;
   }
+  .min-w-\[1512px\] {
+    min-width: 1512px;
+  }
   .flex-1 {
     flex: 1;
   }

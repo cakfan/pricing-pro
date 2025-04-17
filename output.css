@@ -393,6 +393,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
   .border-dashed {
     --tw-border-style: dashed;
     border-style: dashed;
@@ -417,6 +421,9 @@
   }
   .bg-foreground {
     background-color: var(--foreground);
+  }
+  .bg-line {
+    background-color: var(--line);
   }
   .bg-primary {
     background-color: var(--primary);
@@ -448,14 +455,29 @@
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
   }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
   .pt-\[11px\] {
     padding-top: 11px;
+  }
+  .pt-\[19\.03px\] {
+    padding-top: 19.03px;
   }
   .pt-\[30px\] {
     padding-top: 30px;
   }
+  .pr-6 {
+    padding-right: calc(var(--spacing) * 6);
+  }
+  .pr-\[19\.03px\] {
+    padding-right: 19.03px;
+  }
   .pr-\[208px\] {
     padding-right: 208px;
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
   }
   .pb-\[3px\] {
     padding-bottom: 3px;
@@ -463,8 +485,17 @@
   .pb-\[15px\] {
     padding-bottom: 15px;
   }
+  .pb-\[19\.03px\] {
+    padding-bottom: 19.03px;
+  }
   .pb-\[90px\] {
     padding-bottom: 90px;
+  }
+  .pl-6 {
+    padding-left: calc(var(--spacing) * 6);
+  }
+  .pl-\[19\.03px\] {
+    padding-left: 19.03px;
   }
   .pl-\[160px\] {
     padding-left: 160px;
@@ -602,6 +633,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--foreground);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }

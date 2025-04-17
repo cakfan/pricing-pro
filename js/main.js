@@ -7,10 +7,12 @@ document
 
     // Inisialisasi state awal
     if (index === 0) {
+      panel.style.marginTop = "12px";
       panel.style.maxHeight = panel.scrollHeight + "px"; // Buka accordion pertama
       icon.src = "./assets/images/icons/cross-x-filled.svg"; // Ikon terbuka
       icon.classList.remove("-rotate-45");
     } else {
+      panel.style.marginTop = "0px";
       panel.style.maxHeight = "0px"; // Tutup accordion lainnya
       icon.src = "./assets/images/icons/cross-x.svg"; // Ikon tertutup
       icon.classList.add("-rotate-45");
@@ -25,10 +27,12 @@ document
         const ic = acc.querySelector("img");
 
         if (acc === accordion && !isCurrentlyOpen) {
+          p.style.marginTop = "12px";
           p.style.maxHeight = p.scrollHeight + "px"; // Buka accordion
           ic.src = "./assets/images/icons/cross-x-filled.svg"; // Ganti ikon ke terbuka
           ic.classList.remove("-rotate-45");
         } else {
+          p.style.marginTop = "0px";
           p.style.maxHeight = "0px"; // Tutup accordion
           ic.src = "./assets/images/icons/cross-x.svg"; // Ganti ikon ke tertutup
           ic.classList.add("-rotate-45");

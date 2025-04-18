@@ -455,6 +455,12 @@
   .px-\[100px\] {
     padding-inline: 100px;
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
+  .py-\[19\.03px\] {
+    padding-block: 19.03px;
+  }
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
   }

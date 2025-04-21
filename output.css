@@ -8,7 +8,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
@@ -233,9 +232,6 @@
   .ml-auto {
     margin-left: auto;
   }
-  .box-content {
-    box-sizing: content-box;
-  }
   .contents {
     display: contents;
   }
@@ -244,9 +240,6 @@
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
-  }
-  .h-7 {
-    height: calc(var(--spacing) * 7);
   }
   .h-\[50px\] {
     height: 50px;
@@ -275,9 +268,6 @@
   .w-\[140px\] {
     width: 140px;
   }
-  .w-\[150px\] {
-    width: 150px;
-  }
   .w-\[336px\] {
     width: 336px;
   }
@@ -301,9 +291,6 @@
   }
   .w-\[1512px\] {
     width: 1512px;
-  }
-  .w-auto {
-    width: auto;
   }
   .w-fit {
     width: fit-content;
@@ -353,9 +340,6 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .gap-\[30px\] {
-    gap: 30px;
-  }
   .gap-\[50px\] {
     gap: 50px;
   }
@@ -397,18 +381,11 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-dashed {
-    --tw-border-style: dashed;
-    border-style: dashed;
-  }
   .border-line {
     border-color: var(--line);
   }
   .border-muted-light {
     border-color: var(--muted-light);
-  }
-  .border-primary {
-    border-color: var(--primary);
   }
   .border-white {
     border-color: var(--color-white);
@@ -422,9 +399,6 @@
   .bg-foreground {
     background-color: var(--foreground);
   }
-  .bg-line {
-    background-color: var(--line);
-  }
   .bg-primary {
     background-color: var(--primary);
   }
@@ -434,17 +408,11 @@
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }
-  .p-6 {
-    padding: calc(var(--spacing) * 6);
-  }
   .p-\[30px\] {
     padding: 30px;
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -461,32 +429,20 @@
   .py-\[19\.03px\] {
     padding-block: 19.03px;
   }
+  .py-\[23px\] {
+    padding-block: 23px;
+  }
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
-  }
-  .pt-6 {
-    padding-top: calc(var(--spacing) * 6);
   }
   .pt-\[11px\] {
     padding-top: 11px;
   }
-  .pt-\[19\.03px\] {
-    padding-top: 19.03px;
-  }
   .pt-\[30px\] {
     padding-top: 30px;
   }
-  .pr-6 {
-    padding-right: calc(var(--spacing) * 6);
-  }
-  .pr-\[19\.03px\] {
-    padding-right: 19.03px;
-  }
   .pr-\[208px\] {
     padding-right: 208px;
-  }
-  .pb-6 {
-    padding-bottom: calc(var(--spacing) * 6);
   }
   .pb-\[3px\] {
     padding-bottom: 3px;
@@ -494,17 +450,8 @@
   .pb-\[15px\] {
     padding-bottom: 15px;
   }
-  .pb-\[19\.03px\] {
-    padding-bottom: 19.03px;
-  }
   .pb-\[90px\] {
     padding-bottom: 90px;
-  }
-  .pl-6 {
-    padding-left: calc(var(--spacing) * 6);
-  }
-  .pl-\[19\.03px\] {
-    padding-left: 19.03px;
   }
   .pl-\[160px\] {
     padding-left: 160px;
@@ -607,11 +554,6 @@
   }
   .transition-all {
     transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .transition-transform {
-    transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }

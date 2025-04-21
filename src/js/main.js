@@ -8,13 +8,13 @@ document
     // Inisialisasi state awal
     if (index === 0) {
       accordion.classList.add("py-6");
-      accordion.classList.remove("py-[19.03px]");
+      accordion.classList.remove("py-[23px]");
       panel.style.marginTop = "12px";
       panel.style.maxHeight = panel.scrollHeight + "px"; // Buka accordion pertama
       icon.src = "./assets/images/icons/cross-x-filled.svg"; // Ikon terbuka
       icon.classList.remove("-rotate-45");
     } else {
-      accordion.classList.add("py-[19.03px]");
+      accordion.classList.add("py-[23px]");
       accordion.classList.remove("py-6");
       panel.style.marginTop = "0px";
       panel.style.maxHeight = "0px"; // Tutup accordion lainnya
@@ -32,14 +32,14 @@ document
 
         if (acc === accordion && !isCurrentlyOpen) {
           acc.classList.add("py-6");
-          acc.classList.remove("py-[19.03px]");
+          acc.classList.remove("py-[23px]");
           p.style.marginTop = "12px";
           p.style.maxHeight = p.scrollHeight + "px"; // Buka accordion
           ic.src = "./assets/images/icons/cross-x-filled.svg"; // Ganti ikon ke terbuka
           ic.classList.remove("-rotate-45");
         } else {
           acc.classList.remove("py-6");
-          acc.classList.add("py-[19.03px]");
+          acc.classList.add("py-[23px]");
           p.style.marginTop = "0px";
           p.style.maxHeight = "0px"; // Tutup accordion
           ic.src = "./assets/images/icons/cross-x.svg"; // Ganti ikon ke tertutup

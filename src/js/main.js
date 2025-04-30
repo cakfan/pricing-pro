@@ -1,3 +1,36 @@
+const hamburger = document.getElementById("hamburger");
+const [bar1, bar2, bar3] = hamburger.querySelectorAll("span");
+const navList = document.getElementById("nav-list");
+
+let isOpen = false;
+
+hamburger.addEventListener("click", () => {
+  isOpen = !isOpen;
+  hamburger.classList.toggle("hamburger-active");
+
+  if (isOpen) {
+    // Ubah jadi X
+    bar1.classList.add("rotate-45", "-translate-y-1/2");
+    bar2.classList.add("opacity-0");
+    bar3.classList.add("-rotate-45", "translate-y-1/2");
+
+    navList.classList.remove("hidden");
+    navList.classList.add("flex");
+    navList.style.maxHeight = navList.scrollHeight + "px";
+  } else {
+    // Balik ke hamburger
+    bar1.classList.remove("rotate-45", "-translate-y-1/2");
+    bar2.classList.remove("opacity-0");
+    bar3.classList.remove("-rotate-45", "translate-y-1/2");
+
+    navList.style.maxHeight = "0px";
+    setTimeout(() => {
+      navList.classList.remove("flex");
+      navList.classList.add("hidden");
+    }, 300); // delay after animation
+  }
+});
+
 document
   .querySelectorAll(".accordion-container")
   .forEach((accordion, index) => {

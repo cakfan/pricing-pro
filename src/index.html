@@ -10,91 +10,134 @@
   <body>
     <header class="relative flex flex-col items-center pt-[30px]">
       <div class="-z-50 absolute top-0 left-0 bg-foreground h-[752px] w-full">
-        <div class="relative mx-auto h-full min-w-[1512px] overflow-clip">
+        <div
+          class="relative mx-auto h-full w-full lg:min-w-[1512px] overflow-clip"
+        >
           <img
             src="./assets/images/backgrounds/line-1.png"
             alt=""
-            class="absolute top-0 left-0 w-[678px] h-[503] overflow-clip"
+            class="absolute top-0 left-0 w-[400px] h-[300px] md:w-[500px] md:h-[400px] lg:w-[678px] lg:h-[503px] overflow-clip"
           />
           <img
             src="./assets/images/backgrounds/line-2.png"
             alt=""
-            class="absolute bottom-0 right-0 w-[615px] h-[600px] overflow-clip"
+            class="absolute bottom-0 right-0 w-[350px] h-[400px] md:w-[500px] md:h-[500px] lg:w-[615px] lg:h-[600px] overflow-clip"
           />
         </div>
       </div>
-      <nav class="w-[1512px] px-[100px] flex items-center">
-        <a href="#" class="text-primary w-fit text-[32px] leading-12 font-bold"
-          >superb.</a
+
+      <!-- Navbar Wrapper -->
+      <nav
+        class="w-full max-w-[1512px] mx-auto px-4 md:px-8 lg:px-[100px] py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a
+          href="#"
+          class="text-primary text-[24px] md:text-[28px] lg:text-[32px] font-bold"
         >
+          superb.
+        </a>
+
+        <!-- Navigation Menu -->
         <ul
-          class="flex gap-[50px] ml-[248px] text-accent text-[16px] leading-6"
+          id="nav-list"
+          class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 lg:max-h-none lg:overflow-visible lg:transition-none hidden lg:flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-[50px] text-accent text-[16px] leading-6 absolute lg:static top-[90px] right-5 w-fit lg:w-auto bg-foreground ring ring-white lg:ring-0 rounded-lg lg:bg-transparent px-6 lg:px-0 py-0 lg:py-0 z-40"
         >
           <li>
             <a
               href="#"
-              class="transition-all duration-300 hover:text-white hover:font-semibold"
+              class="block py-2 transition-all duration-300 hover:text-white hover:font-semibold"
               >Landing</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="transition-all duration-300 hover:text-white hover:font-semibold"
+              class="block py-2 transition-all duration-300 hover:text-white hover:font-semibold"
               >Features</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="transition-all duration-300 text-white font-semibold"
+              class="block py-2 transition-all duration-300 text-white font-semibold"
               >Pricing</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="transition-all duration-300 hover:text-white hover:font-semibold"
+              class="block py-2 transition-all duration-300 hover:text-white hover:font-semibold"
               >Showcase</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="transition-all duration-300 hover:text-white hover:font-semibold"
+              class="block py-2 transition-all duration-300 hover:text-white hover:font-semibold"
               >Downloads</a
             >
           </li>
         </ul>
+
+        <!-- Sign In Button -->
         <a
           href="#"
-          class="ml-auto h-[50px] w-[140px] flex items-center justify-center text-white text-[16px] leading-6 font-medium rounded-[100px] transition-all duration-300 border border-white hover:bg-white hover:text-foreground"
-          >Sign In</a
+          class="ml-auto mr-6 lg:mr-0 lg:ml-0 flex h-7 w-[74px] lg:h-[48px] lg:w-[140px] items-center justify-center text-white text-[12px] lg:text-[16px] font-medium rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-foreground"
         >
+          Sign In
+        </a>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          id="hamburger"
+          class="lg:hidden h-6 w-6 shrink-0 flex flex-col justify-center items-center gap-1.5 text-white"
+          aria-label="Toggle Menu"
+        >
+          <span
+            class="origin-left transition-all duration-300 block w-6 h-0.5 bg-white"
+          ></span>
+          <span
+            class="origin-left transition-all duration-300 block w-6 h-0.5 bg-white"
+          ></span>
+          <span
+            class="origin-left transition-all duration-300 block w-6 h-0.5 bg-white"
+          ></span>
+        </button>
       </nav>
 
-      <div class="mt-[111px] w-fit flex flex-col items-center gap-5">
-        <h1
-          class="w-[620px] text-5xl text-center text-white leading-[72px] font-bold"
+      <div class="mt-[111px] w-full md:w-fit flex flex-col items-center gap-5">
+        <div
+          class="w-full px-4 sm:px-6 md:px-0 flex flex-col items-center text-center"
         >
-          Empower Your Business. Friendly Pricing.
-        </h1>
-        <p
-          class="text-center text-[20px] leading-[30px] font-medium text-accent"
-        >
-          Our mission is helping you to grow bigger.
-        </p>
-        <div class="mt-[60px] flex gap-[70px]">
-          <!-- card 1 -->
-          <div
-            class="w-[400px] h-fit p-[30px] flex flex-col bg-card rounded-[22px]"
+          <h1
+            class="w-full max-w-[620px] text-3xl sm:text-4xl md:text-5xl text-white font-bold leading-tight sm:leading-[48px] md:leading-[72px]"
           >
-            <div class="flex items-center justify-between">
+            Empower Your Business. Friendly Pricing.
+          </h1>
+          <p
+            class="mt-4 text-base sm:text-lg md:text-[20px] text-accent font-medium leading-relaxed sm:leading-[28px] md:leading-[30px]"
+          >
+            Our mission is helping you to grow bigger.
+          </p>
+        </div>
+
+        <div
+          class="mt-[60px] px-8 flex flex-wrap md:flex-nowrap justify-center gap-[30px] lg:gap-[70px]"
+        >
+          <!-- Card 1 -->
+          <div
+            class="w-full max-w-[290px] lg:w-[400px] lg:max-w-[400px] h-fit p-[30px] flex flex-col bg-card rounded-[22px]"
+          >
+            <div
+              class="flex flex-col-reverse lg:flex-row items-start lg:items-center justify-between"
+            >
               <h2 class="text-6xl text-white leading-[90px] font-bold">$99</h2>
               <span
                 class="px-2 pt-1 pb-[3px] bg-badge rounded-[9px] text-[14px] leading-[21px] font-semibold text-white uppercase"
-                >Basic</span
               >
+                Basic
+              </span>
             </div>
             <p class="text-[16px] leading-6 text-muted">Per month, 1 people</p>
             <hr class="my-[30px] border-t border-line" />
@@ -103,7 +146,7 @@
                 <img
                   src="./assets/images/icons/circle-check.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >All Basic Features</span
@@ -113,7 +156,7 @@
                 <img
                   src="./assets/images/icons/circle-check.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >Unlimited Backlinks Go</span
@@ -123,7 +166,7 @@
                 <img
                   src="./assets/images/icons/circle-check.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >Offline Mode</span
@@ -132,23 +175,27 @@
             </ul>
             <a
               href="#"
-              class="mt-[30px] w-full h-[50px] pt-[11px] pb-[15px] text-center rounded-[100px] border border-white text-[16px] leading-6 font-medium transition-all duration-300 text-white hover:bg-white hover:text-foreground"
-              >Subscribe Basic</a
+              class="mt-[30px] w-full h-[50px] pt-[11px] pb-[15px] text-center rounded-[100px] border border-white text-[16px] leading-6 font-medium text-white hover:bg-white hover:text-foreground transition-all duration-300"
             >
+              Subscribe Basic
+            </a>
           </div>
 
-          <!-- card 2 -->
+          <!-- Card 2 -->
           <div
-            class="w-[400px] h-fit p-[30px] flex flex-col bg-card rounded-[22px]"
+            class="w-full max-w-[290px] lg:w-[400px] lg:max-w-[400px] h-fit p-[30px] flex flex-col bg-card rounded-[22px]"
           >
-            <div class="flex items-center justify-between">
+            <div
+              class="flex flex-col-reverse lg:flex-row items-start lg:items-center justify-between"
+            >
               <h2 class="text-6xl text-white leading-[90px] font-bold">
                 $8,000
               </h2>
               <span
                 class="px-2 pt-1 pb-[3px] bg-primary rounded-[9px] text-[14px] leading-[21px] font-semibold text-white uppercase"
-                >Gold</span
               >
+                Gold
+              </span>
             </div>
             <p class="text-[16px] leading-6 text-muted">Per month, 3 people</p>
             <hr class="my-[30px] border-t border-line" />
@@ -157,7 +204,7 @@
                 <img
                   src="./assets/images/icons/circle-checked.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >All Basic Features</span
@@ -167,7 +214,7 @@
                 <img
                   src="./assets/images/icons/circle-checked.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >Unlimited Backlinks Go</span
@@ -177,7 +224,7 @@
                 <img
                   src="./assets/images/icons/circle-checked.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >Offline Mode</span
@@ -187,7 +234,7 @@
                 <img
                   src="./assets/images/icons/circle-checked.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >Collaboration Files</span
@@ -197,7 +244,7 @@
                 <img
                   src="./assets/images/icons/circle-checked.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >24/7 Live Support</span
@@ -207,7 +254,7 @@
                 <img
                   src="./assets/images/icons/circle-checked.svg"
                   alt=""
-                  class="h-6 w-6 overflow-hidden shrink-0 object-contain"
+                  class="h-6 w-6 object-contain shrink-0"
                 />
                 <span class="text-[16px] leading-6 text-white"
                   >Official Guidance Books</span
@@ -216,38 +263,45 @@
             </ul>
             <a
               href="#"
-              class="mt-[30px] w-full h-[50px] pt-[11px] pb-[15px] text-center rounded-[100px] bg-primary text-[16px] leading-6 font-medium transition-all duration-300 text-white hover:shadow-primary"
-              >Subscribe Gold</a
+              class="mt-[30px] w-full h-[50px] pt-[11px] pb-[15px] text-center rounded-[100px] bg-primary text-[16px] leading-6 font-medium text-white hover:shadow-primary transition-all duration-300"
             >
+              Subscribe Gold
+            </a>
           </div>
         </div>
       </div>
     </header>
     <main class="mt-[100px]">
-      <div class="w-[1512px] mx-auto pl-[160px] pr-[208px] pb-[90px]">
+      <div
+        class="w-full max-w-[640px] md:max-w-[768px] lg:max-w-[1512px] mx-auto px-8 lg:pl-[160px] lg:pr-[208px] pb-[90px]"
+      >
         <span
-          class="text-lg leading-[27px] font-semibold text-primary uppercase"
+          class="text-[16px] leading-normal lg:text-lg lg:leading-[27px] font-semibold text-primary uppercase"
           >Learn More</span
         >
-        <div class="flex gap-[168px]">
+        <div class="flex flex-col gap-10 lg:flex-row lg:gap-[168px]">
           <div class="mt-5 flex flex-col gap-2.5">
-            <h2 class="w-[336px] text-[38px] leading-[57px] font-semibold">
+            <h2
+              class="text-3xl sm:text-4xl leading-normal sm:w-3/4 md:w-[336px] md:text-[38px] md:leading-[57px] font-semibold"
+            >
               Frequently Asked Questions
             </h2>
-            <p class="w-[406px] text-[16px] leading-[30px] text-muted-light">
+            <p
+              class="sm:w-3/4 md:w-[406px] text-[16px] leading-[30px] text-muted-light"
+            >
               Lorem pricing pro teh teu mahal amat atuh akang, cobain dulu deh
               pasti fiturnya gokils
             </p>
             <a
               href="#"
-              class="mt-10 h-[50px] w-fit px-[30px] flex items-center bg-card rounded-[100px] text-[16px] leading-6 font-semibold text-white text-center transition-all duration-300 hover:shadow-card"
+              class="mt-5 md:mt-10 h-[50px] w-fit px-[30px] flex items-center bg-card rounded-[100px] text-[16px] leading-6 font-semibold text-white text-center transition-all duration-300 hover:shadow-card"
               >Contact Us</a
             >
           </div>
           <div class="mt-4 flex flex-col gap-6">
             <!-- Accordion 1 -->
             <div
-              class="accordion-container flex flex-col gap-6 px-6 w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
+              class="accordion-container flex flex-col gap-6 px-6 w-full lg:w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
             >
               <div class="flex flex-col">
                 <div class="flex gap-[52px]">
@@ -280,7 +334,7 @@
 
             <!-- Accordion 2 -->
             <div
-              class="accordion-container flex flex-col gap-6 px-6 w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
+              class="accordion-container flex flex-col gap-6 px-6 w-full lg:w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
             >
               <div class="flex flex-col">
                 <div class="flex gap-[52px]">
@@ -314,7 +368,7 @@
 
             <!-- Accordion 3 -->
             <div
-              class="accordion-container flex flex-col gap-6 px-6 w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
+              class="accordion-container flex flex-col gap-6 px-6 w-full lg:w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
             >
               <div class="flex flex-col">
                 <div class="flex gap-[52px]">
@@ -348,7 +402,7 @@
 
             <!-- Accordion 4 -->
             <div
-              class="accordion-container flex flex-col gap-6 px-6 w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
+              class="accordion-container flex flex-col gap-6 px-6 w-full lg:w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
             >
               <div class="flex flex-col">
                 <div class="flex gap-[52px]">
@@ -382,7 +436,7 @@
 
             <!-- Accordion 5 -->
             <div
-              class="accordion-container flex flex-col gap-6 px-6 w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
+              class="accordion-container flex flex-col gap-6 px-6 w-full lg:w-[570px] border border-muted-light rounded-[26px] transition-all duration-300 cursor-pointer"
             >
               <div class="flex flex-col">
                 <div class="flex gap-[52px]">
